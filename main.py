@@ -58,6 +58,14 @@ def rational_multiplication():
     numb2,denom2=str(value2).split('/')
     result=str(Fraction(int(numb1),int(denom1))*Fraction(int(numb2),int(denom2)))
     return result
+@app.route('/divrational')
+def rational_division():
+    value1=request.args.get('A',default=0,type=str)
+    numb1,denom1=str(value1).split('/')
+    value2=request.args.get('B',default=0,type=str)
+    numb2,denom2=str(value2).split('/')
+    result=str(Fraction(int(numb1),int(denom1))/Fraction(int(numb2),int(denom2)))
+    return result
 
 if __name__ == "__main__":
     app.run()
