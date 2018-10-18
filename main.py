@@ -33,7 +33,7 @@ def division():
     value1=request.args.get('A',default = 0, type = int)
     value2=request.args.get('B',default = 0, type = int)
     result=float(value1/value2)
-    return '%.2f \n' % result
+    return '%.3f \n' % result
 @app.route('/addrational')
 def rational_addition():
     value1=request.args.get('A',default=0,type=str)
@@ -69,3 +69,7 @@ def rational_division():
 
 if __name__ == "__main__":
     app.run()
+
+
+
+
